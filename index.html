@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Starkon International — India-first news, global economy, business, technology, world affairs and sports.">
+  <meta name="theme-color" content="#101b32">
+  <title>Starkon International | Discover the World</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="editor.css">
+
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" id="home">
+    <div class="site-header-inner">
+
+      <a class="brand" href="#home" aria-label="Starkon International home">
+        <span class="brand-name">STARKON</span>
+        <span class="brand-subtitle">INTERNATIONAL</span>
+      </a>
+
+      <p class="brand-tagline">Discover the World. Understand the Future.</p>
+
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#latest-news">Latest News</a>
+        <a href="#featured">Featured</a>
+        <a href="#articles">Full Articles</a>
+        <a href="#article-editor">Editor</a>
+        <a href="backup.html">Backup &amp; Recovery</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <section class="breaking-banner" aria-label="Website notice">
+      <span class="breaking-label">STARKON UPDATE</span>
+      <span id="breaking-text">Welcome to your Starkon International website prototype.</span>
+      <button id="breaking-toggle" class="secondary-button" type="button">
+        Hide notice
+      </button>
+    </section>
+
+    <section class="welcome-section cinematic-section">
+      <div class="hero-decoration hero-decoration-one"></div>
+      <div class="hero-decoration hero-decoration-two"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">INDIA FIRST · GLOBAL PERSPECTIVE</p>
+
+        <h1>Understand the Stories Shaping Our World</h1>
+
+        <p class="welcome-description">
+          From local developments to global power shifts, explore the ideas,
+          people and events shaping our future.
+        </p>
+
+        <a class="primary-button hero-button" id="explore-news" href="#latest-news">
+          Explore the Stories
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="hero-bottom-label">
+        <span class="hero-indicator"></span>
+        NEWS · BUSINESS · TECHNOLOGY · WORLD
+      </div>
+    </section>
+
+    <section id="featured" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">THE STARKON SPOTLIGHT</p>
+        <h2>Featured Story</h2>
+        <p>A closer look at a subject worth understanding.</p>
+      </div>
+
+      <div id="featured-story" class="featured-story">
+        <p>Loading featured story...</p>
+      </div>
+    </section>
+
+    <section id="latest-news" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">STAY CURIOUS</p>
+        <h2>Explore the Latest Stories</h2>
+        <p>Discover explainers across the topics that matter.</p>
+      </div>
+
+      <form id="news-search-form" class="news-search-form" role="search">
+        <label for="news-search">Find a story</label>
+
+        <div class="search-row">
+          <input
+            id="news-search"
+            type="search"
+            placeholder="Search headlines, topics or authors"
+            autocomplete="off"
+          >
+
+          <button class="primary-button" type="submit">Search</button>
+          <button class="secondary-button" id="clear-search" type="button">
+            Clear
+          </button>
+        </div>
+      </form>
+
+      <div id="category-filters" class="category-filters" aria-label="Story categories">
+        <button class="category-button active" type="button" data-category="All" aria-pressed="true">All Stories</button>
+        <button class="category-button" type="button" data-category="Karnataka" aria-pressed="false">Karnataka</button>
+        <button class="category-button" type="button" data-category="India" aria-pressed="false">India</button>
+        <button class="category-button" type="button" data-category="World" aria-pressed="false">World</button>
+        <button class="category-button" type="button" data-category="Business" aria-pressed="false">Business</button>
+        <button class="category-button" type="button" data-category="Technology" aria-pressed="false">Technology</button>
+        <button class="category-button" type="button" data-category="Sports" aria-pressed="false">Sports</button>
+      </div>
+
+      <p id="news-results-count" class="results-count" aria-live="polite"></p>
+
+      <div id="news-grid" class="news-grid"></div>
+
+      <p id="no-news-message" class="empty-message" hidden>
+        No stories match your search.
+      </p>
+    </section>
+
+    <section id="articles" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">GO BEYOND THE HEADLINE</p>
+        <h2>Full Articles</h2>
+        <p>Read the complete explainer and explore the details.</p>
+      </div>
+
+      <div id="full-articles" class="full-articles"></div>
+    </section>
+
+    <section id="article-editor" class="content-section editor-section">
+      <div class="section-heading">
+        <p class="eyebrow">LOCAL PUBLISHING DEMO</p>
+        <h2>Article Editor</h2>
+        <p>Create a sample article and save it in this browser.</p>
+      </div>
+
+      <div class="editor-warning">
+        <strong>Prototype notice:</strong>
+        Articles are saved only in this browser on this device.
+        They are not published online or shared with other visitors.
+        Do not enter private information.
+      </div>
+
+      <form id="article-editor-form" class="article-editor-form">
+        <div class="editor-field">
+          <label for="editor-headline">Headline *</label>
+          <input id="editor-headline" type="text" maxlength="120" required>
+        </div>
+
+        <div class="editor-field">
+          <label for="editor-category">Category *</label>
+          <select id="editor-category" required>
+            <option value="Karnataka">Karnataka</option>
+            <option value="India">India</option>
+            <option value="World">World</option>
+            <option value="Business">Business</option>
+            <option value="Technology">Technology</option>
+            <option value="Sports">Sports</option>
+          </select>
+        </div>
+
+        <div class="editor-field">
+          <label for="editor-summary">Summary *</label>
+          <textarea id="editor-summary" maxlength="300" rows="3" required></textarea>
+        </div>
+
+        <div class="editor-field">
+          <label for="editor-body">Full article *</label>
+          <textarea id="editor-body" rows="7" required></textarea>
+          <p class="editor-help">Leave one blank line between paragraphs.</p>
+        </div>
+
+        <div class="editor-field">
+          <label for="editor-image-url">Image URL (optional)</label>
+          <input
+            id="editor-image-url"
+            type="url"
+            placeholder="https://example.com/image.jpg"
+          >
+          <p class="editor-help">
+            A valid HTTP or HTTPS image URL is required if you add an image.
+          </p>
+        </div>
+
+        <button class="primary-button editor-submit" type="submit">
+          Add Sample Story
+        </button>
+
+        <p id="editor-message" class="editor-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-name">STARKON</span>
+      <span class="brand-subtitle">INTERNATIONAL</span>
+    </a>
+
+    <p>Discover the World. Understand the Future.</p>
+    <p>Educational prototype. Sample stories are not verified live news.</p>
+
+    <p>
+      <a href="backup.html">Backup &amp; Recovery</a>
+    </p>
+
+    <p>&copy; <span id="footer-year"></span> Starkon International</p>
+  </footer>
+</body>
+</html>
